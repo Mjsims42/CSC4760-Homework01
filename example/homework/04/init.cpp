@@ -8,22 +8,23 @@ struct Foo{
     if(i > max){
             max = i;
     }
-  }
-};
+   }
+ };
 int main(int argc, char* argv[]) {
   Kokkos::initialize(argc, argv);
   {
   // Make View and create values
         int n = 8;
-        Kokkos::View A("A",n);
+        int test = 0;
+        Kokkos::View<int*> A("A",n);
         Kokkos::parallel_for("Loop1", n, KOKKOS_LAMBDA (const int i) {
                 A(i) = i*i;
         });
   // Do a parallel reduction
         Foo functor;
         double result = 0;
-        Kokkos::parallel_reduce(A,functor,result);
-        std::cout << "Max output is" << result;
-  }
-  Kokkos::finalize();
-}
+        Kokkos::parallel_reduce(n,functor,result);
+        std::cout << "Max output is: " << result << std::endl;
+  } 
+  Kokkos::finalize(); 
+} 
