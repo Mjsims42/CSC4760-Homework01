@@ -1,7 +1,7 @@
 
 
 #include <Kokkos_Core.hpp>
-#include <cstdio>
+#include <cstdio> 
 #include <iostream>
 // Problem: Make an n ∗ m View where each index equals 1000 ∗ i ∗ j
 int main(int argc, char* argv[]) {
