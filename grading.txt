@@ -1,0 +1,18 @@
+Total: 100
+
+Q1: 5
+Q2:
+Problem 1 : 10
+Problem 2 : 10
+	Comment: Add "\t" to the cout on line 26 to print the matrix in 2D
+Problem 3 : 10
+	Comment: The ciew is well created, it would be better to print out 
+	the dimensions instead of the label.
+Problem 4 : 20 
+	Comment: you could also use the "?:" operators
+Problem 5 : 20
+Problem 6 : 25
+Q3:
+Problem 7 : 
+Problem 8 : 
+
